@@ -13,7 +13,7 @@ export default function TimeChallenge({ title, time }) {
     if (timeExpired) setTimeExpired(false);
     timer.current = setTimeout(() => {
       setTimeExpired(true);
-      dialog.current.showModal();
+      dialog.current.open();
     }, time * 1000);
     
   }
@@ -23,7 +23,7 @@ export default function TimeChallenge({ title, time }) {
     setStart(false);
     setTimeExpired(true);
     setResult(true);
-    dialog.current.showModal();
+    dialog.current.open();
   }
 
   return (
